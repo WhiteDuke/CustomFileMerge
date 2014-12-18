@@ -1,0 +1,26 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#	new file:   CustomFileMerge
+#	new file:   CustomFileMerge.csproj
+#	new file:   DllExport/DllExportAttribute.cs
+#	new file:   DllExport/Mono.Cecil.dll
+#	new file:   DllExport/NppPlugin.DllExport.MSBuild.dll
+#	new file:   DllExport/NppPlugin.DllExport.dll
+#	new file:   DllExport/NppPlugin.DllExport.targets
+#	new file:   Forms/frmMyDlg.Designer.cs
+#	new file:   Forms/frmMyDlg.cs
+#	new file:   Forms/frmMyDlg.resx
+#	new file:   Main.cs
+#	new file:   NppPluginNETBase.cs
+#	new file:   NppPluginNETHelper.cs
+#	new file:   Properties/AssemblyInfo.cs
+#	new file:   Properties/Resources.Designer.cs
+#	new file:   Properties/Resources.resx
+#	new file:   Properties/star.png
+#	new file:   Properties/star_bmp.bmp
+#	new file:   UnmanagedExports.cs
+#
+
