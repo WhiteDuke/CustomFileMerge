@@ -1,4 +1,7 @@
-﻿namespace CustomFileMerge
+﻿using System.Windows.Forms;
+using DnDListViewSpace;
+
+namespace CustomFileMerge
 {
     partial class frmMyDlg
     {
@@ -28,37 +31,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mergeList = new System.Windows.Forms.ListView();
-            this.pathHeader = new System.Windows.Forms.ColumnHeader();
             this.btnMerge = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.labelDelimiter = new System.Windows.Forms.Label();
             this.txtDelimiter = new System.Windows.Forms.TextBox();
             this.chkInclude = new System.Windows.Forms.CheckBox();
+            this.mergeList = new DnDListViewSpace.DnDListView();
+            this.pathHeader = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
-            // 
-            // mergeList
-            // 
-            this.mergeList.AllowDrop = true;
-            this.mergeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.mergeList.CheckBoxes = true;
-            this.mergeList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.pathHeader});
-            this.mergeList.Location = new System.Drawing.Point(12, 12);
-            this.mergeList.Name = "mergeList";
-            this.mergeList.Size = new System.Drawing.Size(600, 333);
-            this.mergeList.TabIndex = 0;
-            this.mergeList.UseCompatibleStateImageBehavior = false;
-            this.mergeList.View = System.Windows.Forms.View.Details;
-            this.mergeList.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.mergeList_ItemChecked);
-            this.mergeList.DragEnter += new System.Windows.Forms.DragEventHandler(this.mergeList_DragEnter);
-            // 
-            // pathHeader
-            // 
-            this.pathHeader.Text = "Путь";
-            this.pathHeader.Width = 580;
             // 
             // btnMerge
             // 
@@ -114,6 +94,31 @@
             this.chkInclude.Text = "Включать имя файла";
             this.chkInclude.UseVisualStyleBackColor = true;
             // 
+            // mergeList
+            // 
+            this.mergeList.AllowDrop = true;
+            this.mergeList.AllowItemDrag = true;
+            this.mergeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mergeList.CheckBoxes = true;
+            this.mergeList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.pathHeader});
+            this.mergeList.FullRowSelect = true;
+            this.mergeList.InsertionLineColor = System.Drawing.Color.LimeGreen;
+            this.mergeList.Location = new System.Drawing.Point(12, 12);
+            this.mergeList.Name = "mergeList";
+            this.mergeList.Size = new System.Drawing.Size(600, 333);
+            this.mergeList.TabIndex = 0;
+            this.mergeList.UseCompatibleStateImageBehavior = false;
+            this.mergeList.View = System.Windows.Forms.View.Details;
+            this.mergeList.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.mergeList_ItemChecked);
+            // 
+            // pathHeader
+            // 
+            this.pathHeader.Text = "Путь";
+            this.pathHeader.Width = 580;
+            // 
             // frmMyDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,13 +149,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView mergeList;
         private System.Windows.Forms.ColumnHeader pathHeader;
         private System.Windows.Forms.Button btnMerge;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label labelDelimiter;
         private System.Windows.Forms.TextBox txtDelimiter;
         private System.Windows.Forms.CheckBox chkInclude;
+        private DnDListView mergeList;
 
     }
 }

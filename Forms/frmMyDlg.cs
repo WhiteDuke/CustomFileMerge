@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using NppPluginNET;
 
@@ -21,6 +22,10 @@ namespace CustomFileMerge
         private void frmMyDlg_Load(object sender, EventArgs e)
         {
             Main.PrepareList(this.mergeList);            
+            Version versionInfo = Assembly.GetExecutingAssembly().GetName().Version;
+            String versionStr = String.Format("{0}.{1}.{2}.{3}", versionInfo.Major.ToString(), 
+            versionInfo.Minor.ToString(), versionInfo.Build.ToString(), versionInfo.Revision.ToString());
+            this.Text = this.Text + " {" + String.Format("Версия {0}", versionStr) + "}";
         }
 
         private void frmMyDlg_FormClosing(object sender, FormClosingEventArgs e)
@@ -60,11 +65,6 @@ namespace CustomFileMerge
             {
                 btnMerge.Enabled = true;
             }
-        }
-
-        private void mergeList_DragEnter(object sender, DragEventArgs e)
-        {
-            
         }
     }
 }

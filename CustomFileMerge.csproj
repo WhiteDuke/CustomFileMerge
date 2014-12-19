@@ -34,13 +34,19 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CancelDnDListViewItemDragEventArgs.cs" />
     <Compile Include="DllExport\DllExportAttribute.cs" />
+    <Compile Include="DnDListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DnDListViewItemDragEventArgs.cs" />
     <Compile Include="Forms\frmMyDlg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmMyDlg.Designer.cs">
       <DependentUpon>frmMyDlg.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsertionMode.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="NppPluginNETBase.cs" />
     <Compile Include="NppPluginNETHelper.cs" />
